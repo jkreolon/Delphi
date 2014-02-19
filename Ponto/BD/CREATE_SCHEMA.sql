@@ -1,20 +1,18 @@
 CREATE DATABASE Ponto
 
-CREATE TABLE Pessoa
+CREATE TABLE Funcionario
 (
-	cpf  VARCHAR(11) not null UNIQUE,
-	nome VARCHAR(50) not null,
-	data_nasc DATETIME,
-	sexo char(1)
-	
-	PRIMARY KEY (cpf),
-	CHECK (sexo in ('M','F'))
+	CODFUNC  INT NOT NULL UNIQUE,
+	NOME     VARCHAR(50) not null,
+	PRIMARY KEY (codFunc)
 	
 );
 
-CREATE TABLE Telefone
+CREATE TABLE Ponto
 (
-	cpf VARCHAR(11) not null,
-	telefone varchar(14) null,
-	FOREIGN KEY (cpf) REFERENCES Pessoa
+	CODFUNC      INT NOT NULL,
+	DTLANCAMENTO DATETIME NOT NULL,
+	LANCENTRADA  DATETIME NULL,
+	LANCSAIDA    DATETIME NULL,
+	FOREIGN KEY (codFunc) REFERENCES Funcionario
 );
