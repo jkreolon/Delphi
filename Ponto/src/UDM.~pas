@@ -10,10 +10,8 @@ type
     conexao            : TADOConnection;
     qryPessoa          : TADOQuery;
     dsPessoa           : TDataSource;
-    qryPessoacpf       : TStringField;
-    qryPessoanome      : TStringField;
-    qryPessoadata_nasc : TDateTimeField;
-    qryPessoasexo      : TStringField;
+    qryPessoaCODFUNC: TIntegerField;
+    qryPessoaNOME: TStringField;
   private
     { Private declarations }
   public

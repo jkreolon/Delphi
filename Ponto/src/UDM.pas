@@ -12,6 +12,9 @@ type
     dsPessoa           : TDataSource;
     qryPessoaCODFUNC: TIntegerField;
     qryPessoaNOME: TStringField;
+    qryPessoaCPF: TIntegerField;
+    qryPessoaNUMHORASMES: TIntegerField;
+    qryPessoaSALARIO: TBCDField;
   private
     { Private declarations }
   public

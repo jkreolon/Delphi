@@ -28,6 +28,17 @@ object DM: TDM
       FieldName = 'NOME'
       Size = 50
     end
+    object qryPessoaCPF: TIntegerField
+      FieldName = 'CPF'
+    end
+    object qryPessoaNUMHORASMES: TIntegerField
+      FieldName = 'NUMHORASMES'
+    end
+    object qryPessoaSALARIO: TBCDField
+      FieldName = 'SALARIO'
+      Precision = 5
+      Size = 2
+    end
   end
   object dsPessoa: TDataSource
     DataSet = qryPessoa
