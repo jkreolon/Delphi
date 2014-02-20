@@ -1,8 +1,8 @@
 object FCadastro: TFCadastro
   Left = 431
   Top = 221
-  Width = 564
-  Height = 339
+  Width = 547
+  Height = 338
   Caption = 'Cadastro Pessoa'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -15,8 +15,8 @@ object FCadastro: TFCadastro
   TextHeight = 13
   object dbgrdPessoa: TDBGrid
     Left = 0
-    Top = 152
-    Width = 556
+    Top = 151
+    Width = 539
     Height = 153
     Align = alBottom
     DataSource = DM.dsPessoa
@@ -30,7 +30,7 @@ object FCadastro: TFCadastro
   object acttbCadastro: TActionToolBar
     Left = 0
     Top = 0
-    Width = 556
+    Width = 539
     Height = 29
     Caption = 'acttbCadastro'
     ColorMap.HighlightColor = 15660791
@@ -39,8 +39,8 @@ object FCadastro: TFCadastro
     Spacing = 0
   end
   object actlstPessoa: TActionList
-    Left = 520
-    Top = 96
+    Left = 504
+    Top = 88
     object actIncluir: TAction
       Caption = 'actIncluir'
     end

@@ -18,24 +18,15 @@ object DM: TDM
     CursorType = ctStatic
     Parameters = <>
     SQL.Strings = (
-      'select * from pessoa')
+      'select * from funcionario')
     Left = 24
     Top = 72
-    object qryPessoacpf: TStringField
-      FieldName = 'cpf'
-      Size = 11
+    object qryPessoaCODFUNC: TIntegerField
+      FieldName = 'CODFUNC'
     end
-    object qryPessoanome: TStringField
-      FieldName = 'nome'
+    object qryPessoaNOME: TStringField
+      FieldName = 'NOME'
       Size = 50
-    end
-    object qryPessoadata_nasc: TDateTimeField
-      FieldName = 'data_nasc'
-    end
-    object qryPessoasexo: TStringField
-      FieldName = 'sexo'
-      FixedChar = True
-      Size = 1
     end
   end
   object dsPessoa: TDataSource

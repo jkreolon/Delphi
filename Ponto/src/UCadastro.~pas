@@ -8,10 +8,10 @@ uses
 
 type
   TFCadastro = class(TForm)
-    dbgrdPessoa: TDBGrid;
-    actlstPessoa: TActionList;
-    acttbCadastro: TActionToolBar;
-    actIncluir: TAction;
+    dbgrdPessoa   : TDBGrid;
+    actlstPessoa  : TActionList;
+    acttbCadastro : TActionToolBar;
+    actIncluir    : TAction;
   private
     { Private declarations }
   public

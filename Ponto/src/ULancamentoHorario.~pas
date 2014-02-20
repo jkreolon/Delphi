@@ -4,10 +4,13 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs;
+  Dialogs, Grids, DBGrids, StdCtrls;
 
 type
   TFLancamentoHorario = class(TForm)
+    lblLancamento: TLabel;
+    edtlancamento: TEdit;
+    dbgrdLancamento: TDBGrid;
   private
     { Private declarations }
   public
@@ -22,3 +25,5 @@ implementation
 {$R *.dfm}
 
 end.
+
+

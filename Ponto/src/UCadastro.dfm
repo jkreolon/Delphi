@@ -29,26 +29,12 @@ object FCadastro: TFCadastro
     Columns = <
       item
         Expanded = False
-        FieldName = 'cpf'
-        Title.Caption = 'CPF'
+        FieldName = 'CODFUNC'
         Visible = True
       end
       item
         Expanded = False
-        FieldName = 'nome'
-        Title.Caption = 'Nome'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'data_nasc'
-        Title.Caption = 'Data Nascimento'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'sexo'
-        Title.Caption = 'SEXO'
+        FieldName = 'NOME'
         Visible = True
       end>
   end
