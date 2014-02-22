@@ -7,14 +7,14 @@ uses
 
 type
   TDM = class(TDataModule)
-    conexao            : TADOConnection;
-    qryPessoa          : TADOQuery;
-    dsPessoa           : TDataSource;
-    qryPessoaCODFUNC: TIntegerField;
-    qryPessoaNOME: TStringField;
-    qryPessoaCPF: TIntegerField;
-    qryPessoaNUMHORASMES: TIntegerField;
-    qryPessoaSALARIO: TBCDField;
+    conexao              : TADOConnection;
+    qryPessoa            : TADOQuery;
+    dsPessoa             : TDataSource;
+    qryPessoaCODFUNC     : TIntegerField;
+    qryPessoaNOME        : TStringField;
+    qryPessoaCPF         : TIntegerField;
+    qryPessoaNUMHORASMES : TIntegerField;
+    qryPessoaSALARIO     : TBCDField;
   private
     { Private declarations }
   public
@@ -29,3 +29,10 @@ implementation
 {$R *.dfm}
 
 end.
+
+
+
+
+
+
+

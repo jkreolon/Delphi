@@ -7,8 +7,11 @@ object DM: TDM
   object conexao: TADOConnection
     Connected = True
     ConnectionString = 
-      'Provider=SQLOLEDB.1;Persist Security Info=False;User ID=sa;Initi' +
-      'al Catalog=Ponto;Data Source=VMTI\SQLEXPRESS'
+      'Provider=SQLOLEDB.1;Password="";Persist Security Info=True;User ' +
+      'ID=sa;Initial Catalog=Ponto;Data Source=VMTI\SQLEXPRESS;Use Proc' +
+      'edure for Prepare=1;Auto Translate=True;Packet Size=4096;Worksta' +
+      'tion ID=VMTI;Use Encryption for Data=False;Tag with column colla' +
+      'tion when possible=False'
     Provider = 'SQLOLEDB.1'
     Left = 24
     Top = 16
@@ -27,6 +30,17 @@ object DM: TDM
     object qryPessoaNOME: TStringField
       FieldName = 'NOME'
       Size = 50
+    end
+    object qryPessoaCPF: TIntegerField
+      FieldName = 'CPF'
+    end
+    object qryPessoaNUMHORASMES: TIntegerField
+      FieldName = 'NUMHORASMES'
+    end
+    object qryPessoaSALARIO: TBCDField
+      FieldName = 'SALARIO'
+      Precision = 5
+      Size = 2
     end
   end
   object dsPessoa: TDataSource

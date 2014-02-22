@@ -2,9 +2,9 @@ program ControlePonto;
 
 uses
   Forms,
+  UCadastro          in 'UCadastro.pas' {FCadastro},
   ULancamentoHorario in 'ULancamentoHorario.pas' {FLancamentoHorario},
-  UDM                in 'UDM.pas' {DM: TDataModule},
-  UCadastro          in 'UCadastro.pas' {FCadastro};
+  UDM                in 'UDM.pas' {DM: TDataModule};
 
 
 {$R *.res}
@@ -12,8 +12,6 @@ uses
 begin
   Application.Initialize;
   Application.Title := 'Controle Ponto';
-  Application.CreateForm(TFLancamentoHorario, FLancamentoHorario);
-  Application.CreateForm(TDM, DM);
   Application.CreateForm(TFCadastro, FCadastro);
   Application.Run;
 end.

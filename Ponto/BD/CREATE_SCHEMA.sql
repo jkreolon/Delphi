@@ -3,9 +3,9 @@ DROP TABLE Funcionario;
 
 CREATE TABLE Funcionario
 (
-	CODFUNC     INT         NOT NULL,
-	NOME        VARCHAR(50) NOT NULL,
-	CPF         INT         NOT NULL,
+	CODFUNC     INT IDENTITY(1,1) NOT NULL,
+	NOME        VARCHAR(50)       NOT NULL,
+	CPF         INT               NOT NULL,
 	NUMHORASMES INT,
 	SALARIO     NUMERIC(5,2),
 )

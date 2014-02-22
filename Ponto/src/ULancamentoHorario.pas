@@ -8,9 +8,9 @@ uses
 
 type
   TFLancamentoHorario = class(TForm)
-    lblLancamento: TLabel;
-    edtlancamento: TEdit;
-    dbgrdLancamento: TDBGrid;
+    lblLancamento   : TLabel;
+    edtlancamento   : TEdit;
+    dbgrdLancamento : TDBGrid;
   private
     { Private declarations }
   public
@@ -25,6 +25,5 @@ implementation
 {$R *.dfm}
 
 end.
-
 
 

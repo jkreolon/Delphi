@@ -5,25 +5,39 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs,UDM, Grids, DBGrids, ActnList, ToolWin, ActnMan, ActnCtrls,
-  ComCtrls;
+  ComCtrls, StdCtrls, Buttons, ExtCtrls, DBCtrls, Mask;
 
 type
   TFCadastro = class(TForm)
-    dbgrdPessoa   : TDBGrid;
-    actlstPessoa  : TActionList;
-    tlbButtons    : TToolBar;
-    btnInserir    : TToolButton;
-    btnAlterar    : TToolButton;
-    btnExcluir    : TToolButton;
-    btnSalvar     : TToolButton;
-    btnCancelar   : TToolButton;
-    actAlterar: TAction;
-    actInserir: TAction;
-    actExcluir: TAction;
-    actSalvar: TAction;
-    actCancelar: TAction;
-    btnSair: TToolButton;
-    actSair: TAction;
+    dbgrdPessoa      : TDBGrid;
+    actlstPessoa     : TActionList;
+    actAlterar       : TAction;
+    actInserir       : TAction;
+    actExcluir       : TAction;
+    actSalvar        : TAction;
+    actCancelar      : TAction;
+    actSair          : TAction;
+    tlbButtons       : TToolBar;
+    btnInserir       : TBitBtn;
+    btnAlterar       : TBitBtn;
+    btnExcluir       : TBitBtn;
+    btnSalvar        : TBitBtn;
+    btnCancelar      : TBitBtn;
+    btnSair          : TBitBtn;
+    dbnvgrRegister   : TDBNavigator;
+    dbtxtCodFunc     : TDBText;
+    lblCodFunc       : TLabel;
+    dbedtNomeFunc    : TDBEdit;
+    lblNomeFunc      : TLabel;
+    dbedtCPF         : TDBEdit;
+    lblCPF           : TLabel;
+    dbedtNumHorasMes : TDBEdit;
+    lblNumHorasMes   : TLabel;
+    lblSalario       : TLabel;
+    dbedtSalario     : TDBEdit;
+    procedure actInserirExecute(Sender: TObject);
+    procedure actSairExecute(Sender: TObject);
+
   private
     { Private declarations }
   public
@@ -36,5 +50,25 @@ var
 implementation
 
 {$R *.dfm}
+procedure TFCadastro.actInserirExecute(Sender: TObject);
+begin
+btnInserir.Enabled := True;
+  try
+    dm.conexao.Connected := True;
+    dm.qryPessoa.Open;
+    dm.qryPessoa.Append;
+    dbedtNomeFunc.SetFocus;
+  except
+    ShowMessage('Operação não disponível');
+  end;
+
+end;
+
+procedure TFCadastro.actSairExecute(Sender: TObject);
+begin
+btnSair.Enabled := True;
+  Close;
+
+end;
 
 end.

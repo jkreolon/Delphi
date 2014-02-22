@@ -7,8 +7,11 @@ object DM: TDM
   object conexao: TADOConnection
     Connected = True
     ConnectionString = 
-      'Provider=SQLOLEDB.1;Persist Security Info=False;User ID=sa;Initi' +
-      'al Catalog=Ponto;Data Source=VMTI\SQLEXPRESS'
+      'Provider=SQLOLEDB.1;Password="";Persist Security Info=True;User ' +
+      'ID=sa;Initial Catalog=Ponto;Data Source=VMTI\SQLEXPRESS;Use Proc' +
+      'edure for Prepare=1;Auto Translate=True;Packet Size=4096;Worksta' +
+      'tion ID=VMTI;Use Encryption for Data=False;Tag with column colla' +
+      'tion when possible=False'
     Provider = 'SQLOLEDB.1'
     Left = 24
     Top = 16
